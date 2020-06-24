@@ -1,0 +1,12 @@
+{%  extends 'accounts/main.html' %}
+{% load static %}
+
+{% block content %}
+
+<form method="POST" style="margin-top:30px">
+{% csrf_token %}
+{{customer}}
+
+<input type="submit" name="Submit">
+</form>
+{% endblock content %}
