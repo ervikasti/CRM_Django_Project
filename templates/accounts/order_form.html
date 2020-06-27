@@ -6,11 +6,12 @@
     {% csrf_token %}
     {{formset.management_form}}
     {% for form in formset %}
-    
-        {{form}}
+            
+            {{form}}
+
         <hr>
     {% endfor %}
-    
+
     <input type = "submit" name="Submit">
 </form>
 {% endblock content %}

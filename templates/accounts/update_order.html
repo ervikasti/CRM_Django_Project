@@ -4,9 +4,13 @@
 {% block content %}
 <form action="" method="POST" style="margin-top:20px">
     {% csrf_token %}
+    {{formset.management_form}}
+    {% for form in formset %}
+            {{form.label}}
+            {{form}}
+            <hr>
 
-        {{form}}
-        
+    {% endfor %}
     <input type = "submit" name="Submit">
 </form>
 {% endblock content %}
