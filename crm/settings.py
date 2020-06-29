@@ -24,9 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'd!79(*!n^r*sh58hio!)y_g$xt-%dap1*c$ya)wjb8n^wwd0jr'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ervikas-crm.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -127,7 +127,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = '/static/'
 MEDIA_URL ='/images/'
 STATICFILES_DIRS = [
@@ -141,5 +141,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'uploadfile796@gmail.com'
+EMAIL_HOST_USER = 'tcsctcetraspberrypi@gmail.com'
 EMAIL_HOST_PASSWORD = 'Tcet@123'
