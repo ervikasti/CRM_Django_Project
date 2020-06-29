@@ -99,6 +99,10 @@
 							</div>
 								<input type="password" name="password" placeholder="Password..." class="form-control" >
 						</div>
+							
+												{% for msg in messages %}
+												<span class="badge badge-warning">{{msg}}</span>
+												{% endfor %}
 
 							<div class="d-flex justify-content-center mt-3 login_container">
 				 				<input class="btn login_btn" type="submit" value="Login">
@@ -107,10 +111,7 @@
 
 				</div>
 				
-					{% for msg in messages %}
-						<span class="badge badge-warning">{{msg}}</span>
-					{% endfor %}
-				 </div>
+				 
 				<div class="mt-4">
 					<div class="d-flex justify-content-center links">
 						Don't have an account? <a href="{% url 'register' %}" class="ml-2">Sign Up</a>
